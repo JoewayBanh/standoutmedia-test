@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Standoutmedia test</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <img id="logo" src="./images/logo_korrekt.png" alt="logo" />
+          <div class="navbar-navigation">
+            <div class="navbar-contact-info">
+              <span
+                ><i class="fa-solid fa-envelope icon"></i>
+                info@vedsted-gulve.dk</span
+              >
+              <span class="phone-number"
+                ><i class="fa-solid fa-phone-flip icon"></i> 44 91 48 99</span
+              >
+              <i class="fa-brands fa-facebook-f icon"></i>
+            </div>
+            <div>
+              <ul>
+                <li><a class="active" href="#home">Velkommen</a></li>
+                <li><a href="#gulvslibning">Gulvslibning & behandling</a></li>
+                <li><a href="#linoleum">Linoleum, vinyl & tæpper</a></li>
+                <li><a href="#gulvvådrum">Gulvvådrum</a></li>
+                <li><a href="#traegulv">Trægulv</a></li>
+                <li><a href="#about">Om os</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Vil du have <br /><span>flotte gulve?</span></h1>
+          <button id="cta-btn">Få et tilbud</button>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services-first-half">
+          <h2>
+            Velkommen til Vedsted Gulvservice <br />
+            - din professionelle gulvpartner
+          </h2>
+          <p>
+            Har du brug for at få flottere gulve? Så kan vi hjælpe dig. <br />
+            Vi kan det hele: Rive gulve op, lægge nye, isolere, slibe og
+            selvfølgelig <br />
+            behandle dem med de bedste produkter. <br />
+            Bare spørg - så finder vi løsningen.
+          </p>
+        </div>
+        <div class="services-images services-latter-half">
+          <div class="services-details">
+            <img src="./images/behandling.png" alt="gulvslibning" />Gulvslibning
+            & Behandling
+          </div>
+          <div class="services-details">
+            <img src="./images/vaadrum.png" alt="gulvslibning" />Gulvvådrum
+          </div>
+          <div class="services-details">
+            <img src="./images/linoleum.png"gulvslibning" />Linoleum, vinyl &
+            tæpper
+          </div>
+          <div class="services-details">
+            <img src="./images/traegulve.png" alt="gulvslibning" />Trægulv
+          </div>
+        </div>
+      </section>
+
+      <section class="credentials">
+        <div class="credentials-text">
+          <div>
+            <h3>Vi rådgiver gerne</h3>
+            <p>
+              Er du i tvivl om, hvad den rigtige løsning er for dig? Så hjælper
+              vi gerne med at finde <br />
+              svaret. Lad os aftale et møde og se på det sammen - så kan vi
+              hurtigt fortælle, om du <br />
+              har brug for et helt nyt gulv - eller om det kan klares med en
+              omgang slibning og <br />
+              behandling.
+            </p>
+            <p>Ring eller skriv - så skal vi nok hjælpe dig godt videre.</p>
+          </div>
+          <div>
+            <h3>Vi har erfaring</h3>
+            <p>
+              Hos Vedsted Gulvservice har vi i generatioenr leveret flotte
+              gulvløsninger til <br />
+              sjællandske familier, organisationer og virksomheder.
+            </p>
+            <p>
+              Så har du et behov, så tøv ikke - tag fat i os, så finder vi den
+              løsning, der er den helt <br />rigtige for dig.
+            </p>
+          </div>
+        </div>
+        <div class="credentials-logos">
+          <img src="./images/junckers.png" alt="junckers" />
+          <img src="./images/byg-garanti.png" alt="byg-garanti" />
+          <img src="./images/gulvbranchen.png" alt="gulvbranchen" />
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact-first-half">
+          <h3>Kontakt os</h3>
+          <p>
+            Kontakt os i dag på telefon: <b>44 91 48 91</b> eller på e-mail:
+            <b>info@vedsted-gulve.dk</b> og lad os høre, <br />hvad du drømmer
+            om.
+          </p>
+          <p>Så skal vi nok gøre vores for, at drømmen går i opfyldelse.</p>
+        </div>
+
+        <div class="contact-latter-half">
+          <form action="#">
+            <input
+              class="form-element"
+              type="text"
+              placeholder="Navn"
+              maxlength="30"
+              required
+            />
+            <input
+              class="form-element"
+              type="number"
+              placeholder="Telefon"
+              onkeydown="return event.keyCode !== 69"
+              oninput="javascript: if (this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength)};"
+              maxlength="8"
+              required
+            />
+            <input
+              class="form-element"
+              type="email"
+              placeholder="Mailadresse"
+              maxlength="30"
+              required
+            />
+            <textarea
+              class="form-element"
+              name="besked"
+              id="besked"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button class="form-element" type="submit">SEND</button>
+          </form>
+          <div>Google maps</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-first-half">
+        <div>
+          <img src="./images/aaa.png" alt="aaa" />
+        </div>
+        <div>
+          <address>
+            <span>Byggeriet Ankenævn </span> <br />
+            Nørre Voldgade 106, 1358 Kvh K <br />
+            info@byggerietankenaevn.dk <br />
+            www.byggerietankenaevn.dk
+          </address>
+        </div>
+        <div><img src="./images/knaekcancer.jpg" alt="knaekcancer" /></div>
+      </div>
+      <div class="footer-latter-half">
+        <div>
+          <b>Vedsted Gulvservice</b> | Industrivangen 22 | 2635 Ishøj | Tlf.: 44
+          91 28 91 | info@vedsted-gulve.dk
+        </div>
+        <div><p>Lavet af Joeway Banh</p></div>
+      </div>
+    </footer>
+    <!-- <br />
+    <br />
+    <br />
+    <h1 style="color: #ecc511">Test colour</h1>
+    <h1 style="color: #7a0202">Test colour</h1>
+    <h1 style="color: #313132">Test colour</h1>
+    <h1 style="color: #fff">Test colour</h1>
+    <h1 style="color: #000">Test colour</h1>
+    <h1 style="color: #222">Test colour</h1> -->
+  </body>
+</html>

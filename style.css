@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  width: 70%;
+  margin: auto;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+#logo {
+  width: auto;
+  height: 3rem;
+  margin: auto 0;
+}
+.navbar-navigation {
+  flex-direction: column;
+}
+.navbar-contact-info {
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+}
+.navbar-contact-info span {
+  margin: 0 1rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+li {
+  padding: 0.5rem 1rem;
+}
+li a {
+  text-decoration: none;
+  color: #000;
+}
+.phone-number {
+  color: #ecc511;
+}
+i {
+  color: #7a0202;
+  padding: 0 0.5rem;
+}
+.active {
+  text-decoration: underline;
+  text-decoration-color: #ecc511;
+  text-decoration-thickness: 0.2rem;
+}
+
+.hero {
+  min-height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/images/slider.jpg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero-text {
+  width: 70%;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  background: transparent;
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.3rem 0.5rem rgba(49, 49, 50, 0.8);
+}
+.hero div span {
+  font-size: 4rem;
+}
+#cta-btn {
+  color: #fff;
+  background-color: rgba(122, 2, 2, 0.6);
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding: 0.4rem 1.5rem;
+}
+
+.services {
+  min-height: 60vh;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+.services-images {
+  display: flex;
+  line-height: 3rem;
+}
+.services-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 4rem 2rem;
+  font-weight: bold;
+}
+
+.credentials {
+  background-image: url("./images/trae.jpg");
+  min-height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.credentials-text {
+  display: flex;
+  justify-content: space-around;
+}
+.credentials-text p {
+  padding: 0.8rem 0;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact-first-half {
+  text-align: center;
+}
+.contact-latter-half {
+  display: flex;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.form-element {
+  padding: 0.5rem;
+  margin: 0.2rem;
+}
+form button {
+  color: #fff;
+  background-color: #7a0202;
+  padding: 0.5rem;
+}
+/* for at fjerne op/ned pile fra input type="number"*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+footer {
+  min-height: 15vh;
+  background-color: #222;
+  margin-top: auto;
+  color: #fff;
+}
+address {
+  font-style: normal;
+  text-align: end;
+}
+address span {
+  font-size: 1.5rem;
+}
+.footer-first-half,
+.footer-latter-half {
+  display: flex;
+}
+.footer-first-half {
+  justify-content: space-around;
+}
+.footer-latter-half {
+  justify-content: space-between;
+}
