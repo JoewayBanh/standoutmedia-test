@@ -112,7 +112,7 @@ i {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/images/slider.jpg");
+  /* background-image: url("./images/slider.jpg"); */
   position: relative;
   display: flex;
   justify-content: center;
