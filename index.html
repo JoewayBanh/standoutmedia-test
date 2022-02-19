@@ -29,10 +29,12 @@
               <span class="phone-number"
                 ><i class="fa-solid fa-phone-flip icon"></i> 44 91 48 99</span
               >
-              <a href="#"><i class="fa-brands fa-facebook-f icon"></i></a>
+              <span>
+                <i class="fa-brands fa-facebook-f icon"></i>
+              </span>
             </div>
             <div>
-              <ul>
+              <ul class="nav-links">
                 <li><a class="active" href="#home">Velkommen</a></li>
                 <li><a href="#gulvslibning">Gulvslibning & behandling</a></li>
                 <li><a href="#linoleum">Linoleum, vinyl & tæpper</a></li>
@@ -43,6 +45,26 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div class="burger">
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <div class="burger-content">
+              <li><a href="#home">Hjem</a></li>
+              <li><a href="#gulvslibning">Gulvslibning & behandling</a></li>
+              <li><a href="#linoleum">Linoleum, vinyl & tæpper</a></li>
+              <li><a href="#gulvvådrum">Gulvvådrum</a></li>
+              <li><a href="#traegulv">Trægulv</a></li>
+              <br />
+              <li><a href="#about">Om os</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </div>
+          </div>
+          <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+            >&#9776;</span
+          >
         </div>
       </nav>
     </header>
@@ -118,7 +140,11 @@
         <div class="credentials-logos">
           <img src="./images/junckers.png" alt="junckers" />
           <img src="./images/byg-garanti.png" alt="byg-garanti" />
-          <img src="./images/gulvbranchen.png" alt="gulvbranchen" />
+          <img
+            class="last-credential-logo"
+            src="./images/gulvbranchen.png"
+            alt="gulvbranchen"
+          />
         </div>
       </section>
 
@@ -167,13 +193,16 @@
             ></textarea>
             <button class="form-element" type="submit">SEND</button>
           </form>
-          <div>Google maps</div>
+          <div class="google-maps-container">
+            <div id="googleMap"></div>
+          </div>
         </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-first-half">
-        <div>
+        <div class="footer-logo1">
           <img src="./images/aaa.png" alt="aaa" />
         </div>
         <div>
@@ -184,14 +213,18 @@
             www.byggerietankenaevn.dk
           </address>
         </div>
-        <div><img src="./images/knaekcancer.jpg" alt="knaekcancer" /></div>
+        <div class="footer-logo2">
+          <img src="./images/knaekcancer.jpg" alt="knaekcancer" />
+        </div>
       </div>
       <div class="footer-latter-half">
-        <div>
+        <div class="footer-contact-info">
           <b>Vedsted Gulvservice</b> | Industrivangen 22 | 2635 Ishøj | Tlf.: 44
           91 28 91 | info@vedsted-gulve.dk
         </div>
-        <div><p>Lavet af Joeway Banh</p></div>
+        <div class="sign-off">
+          <p>Lavet af Joeway Banh</p>
+        </div>
       </div>
     </footer>
     <!-- <br />
@@ -203,5 +236,28 @@
     <h1 style="color: #fff">Test colour</h1>
     <h1 style="color: #000">Test colour</h1>
     <h1 style="color: #222">Test colour</h1> -->
+    <script>
+      function myMap() {
+        var mapProp = {
+          center: new google.maps.LatLng(55.60616352741041, 12.35197841414906),
+          zoom: 14.75,
+        };
+
+        var map = new google.maps.Map(
+          document.getElementById("googleMap"),
+          mapProp
+        );
+      }
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdWgI4up-xinHDnFxXUuTV-70ZFeLUUV0&callback=myMap"></script>
   </body>
 </html>

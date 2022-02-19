@@ -3,10 +3,15 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  --yellow-colour: #ecc511;
+  --white-colour: #fff;
+  --grey-colour: #222;
+  --black-colour: #000;
+  --red-colour: #7a0202;
+  --large-screen-width: 70%;
 }
-
 nav {
-  width: 70%;
+  width: var(--large-screen-width);
   margin: auto;
 }
 .navbar {
@@ -17,7 +22,7 @@ nav {
 }
 #logo {
   width: auto;
-  height: 3rem;
+  max-height: 3rem;
   margin: auto 0;
 }
 .navbar-navigation {
@@ -27,9 +32,12 @@ nav {
   display: flex;
   justify-content: end;
   padding: 1rem;
+  white-space: nowrap;
+  flex-wrap: wrap;
 }
 .navbar-contact-info span {
   margin: 0 1rem;
+  padding: 0.5rem;
 }
 nav ul {
   display: flex;
@@ -40,22 +48,62 @@ nav ul {
 }
 li {
   padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
 }
 li a {
   text-decoration: none;
-  color: #000;
+  color: var(--black-colour);
 }
 .phone-number {
-  color: #ecc511;
+  color: var(--yellow-colour);
 }
 i {
-  color: #7a0202;
+  color: var(--red-colour);
   padding: 0 0.5rem;
 }
 .active {
   text-decoration: underline;
-  text-decoration-color: #ecc511;
+  text-decoration-color: var(--yellow-colour);
   text-decoration-thickness: 0.2rem;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.burger-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+.overlay .closebtn {
+  position: absolute;
+  right: 2%;
+  font-size: 3rem;
 }
 
 .hero {
@@ -70,19 +118,20 @@ i {
   justify-content: center;
 }
 .hero-text {
-  width: 70%;
-  color: #fff;
+  width: var(--large-screen-width);
+  color: var(--white-colour);
   position: absolute;
   top: 30%;
   background: transparent;
   font-size: 2rem;
   text-shadow: 0.1rem 0.3rem 0.5rem rgba(49, 49, 50, 0.8);
+  white-space: nowrap;
 }
 .hero div span {
   font-size: 4rem;
 }
 #cta-btn {
-  color: #fff;
+  color: var(--white-colour);
   background-color: rgba(122, 2, 2, 0.6);
   font-size: 1rem;
   margin: 1rem 0;
@@ -108,13 +157,13 @@ i {
 .services-latter-half {
   display: flex;
   line-height: 3rem;
-  width: 70%;
+  width: var(--large-screen-width);
+  flex-wrap: wrap;
 }
 .services-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 4rem 0;
+  padding: 2rem 1rem 2rem 0;
   font-weight: bold;
   margin: auto;
 }
@@ -129,7 +178,7 @@ i {
 .credentials-text {
   display: flex;
   justify-content: space-around;
-  width: 70%;
+  width: var(--large-screen-width);
   margin: auto;
 }
 .credentials-text p,
@@ -139,7 +188,7 @@ h3 {
   margin: auto 1rem;
 }
 .credentials-logos {
-  width: 70%;
+  width: var(--large-screen-width);
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -164,15 +213,15 @@ h3 {
 form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 48%;
 }
 .form-element {
   padding: 0.5rem;
   margin: 0.2rem;
 }
 form button {
-  color: #fff;
-  background-color: #7a0202;
+  color: var(--white-colour);
+  background-color: var(--red-colour);
   padding: 0.5rem;
 }
 /* for at fjerne op/ned pile fra input type="number"*/
@@ -184,11 +233,17 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
+.google-maps-container {
+  width: 50%;
+}
+#googleMap {
+  width: auto;
+  height: 100%;
+}
 footer {
   min-height: 15vh;
   padding: 2rem 0 1rem 0;
-  background-color: #222;
+  background-color: var(--grey-colour);
   margin-top: auto;
   color: #fff;
 }
@@ -197,20 +252,130 @@ address {
   text-align: end;
 }
 address span {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .footer-first-half,
 .footer-latter-half {
   display: flex;
 }
 .footer-first-half {
-  justify-content: space-around;
-  width: 70%;
+  justify-content: space-between;
+  width: var(--large-screen-width);
+  align-items: center;
   margin: auto;
+}
+.footer-logo2 {
+  display: flex;
+  justify-content: end;
 }
 .footer-latter-half {
   justify-content: space-between;
-  width: 70%;
+  width: var(--large-screen-width);
   margin: auto;
   padding-top: 2rem;
+  white-space: nowrap;
+}
+.footer-contact-info {
+  white-space: normal;
+  padding: 0.5rem;
+}
+.sign-off {
+  padding: 0.5rem 0 0 0;
+  display: flex;
+  align-items: flex-end;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 1242px) {
+  header {
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  #logo {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+  }
+  .nav-links,
+  .navbar-contact-info {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+  }
+  .hero div span {
+    font-size: 3rem;
+  }
+  .services-details {
+    padding: 2rem 1rem;
+    white-space: normal;
+    min-width: 35%;
+  }
+  .services-latter-half,
+  .credentials-text {
+    width: auto;
+  }
+  .credentials-logos {
+    flex-direction: column;
+  }
+  .credentials-logos img {
+    width: 40%;
+  }
+  .last-credential-logo {
+    padding-top: 2rem;
+  }
+  .contact {
+    width: 75%;
+  }
+  address {
+    font-size: 0.6rem;
+  }
+  address span {
+    font-size: 1rem;
+  }
+  footer img {
+    width: 50%;
+    height: 50%;
+  }
+  .footer-latter-half {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 842px) {
+  html {
+    font-size: 80%;
+  }
+  #logo {
+    left: 5%;
+    top: 25%;
+    height: 50%;
+  }
+  .hero-text {
+    left: 5%;
+  }
 }
