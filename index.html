@@ -227,36 +227,24 @@
         </div>
       </div>
     </footer>
-    <!-- <br />
-    <br />
-    <br />
-    <h1 style="color: #ecc511">Test colour</h1>
-    <h1 style="color: #7a0202">Test colour</h1>
-    <h1 style="color: #313132">Test colour</h1>
-    <h1 style="color: #fff">Test colour</h1>
-    <h1 style="color: #000">Test colour</h1>
-    <h1 style="color: #222">Test colour</h1> -->
     <script>
       function myMap() {
-        var mapProp = {
+        const mapProp = {
           center: new google.maps.LatLng(55.60616352741041, 12.35197841414906),
           zoom: 14.75,
         };
-
-        var map = new google.maps.Map(
+        const map = new google.maps.Map(
           document.getElementById("googleMap"),
           mapProp
         );
       }
-    </script>
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-      }
 
-      function closeNav() {
+      openNav = () => {
+        document.getElementById("myNav").style.width = "100%";
+      };
+      closeNav = () => {
         document.getElementById("myNav").style.width = "0%";
-      }
+      };
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdWgI4up-xinHDnFxXUuTV-70ZFeLUUV0&callback=myMap"></script>
   </body>
